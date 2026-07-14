@@ -1,13 +1,13 @@
-# SuperClean — Global Superstore Data Cleaning & EDA Pipeline
+# 🧹 SuperClean — Global Superstore Data Cleaning & EDA Pipeline
 
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
-![Jupyter Notebook](https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white)
-![Microsoft Excel](https://img.shields.io/badge/Excel-217346?style=for-the-badge&logo=microsoftexcel&logoColor=white)
-![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
-![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3.10-3776AB?style=flat&logo=python&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-1.5-150458?style=flat&logo=pandas&logoColor=white)
+![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-F37626?style=flat&logo=jupyter&logoColor=white)
+![NumPy](https://img.shields.io/badge/NumPy-1.24-013243?style=flat&logo=numpy&logoColor=white)
+![Status](https://img.shields.io/badge/Status-Complete-brightgreen?style=flat)
+![License](https://img.shields.io/badge/License-MIT-yellow?style=flat)
 
-A Pandas-based data cleaning pipeline built on the **Global Superstore** dataset (51,290 orders across 7 markets and 147 countries, 2011–2014). This project takes raw, messy retail transaction data and turns it into an analysis-ready dataset through missing value handling, deduplication, and data type correction — all documented step-by-step in a Jupyter Notebook.
+A Pandas-based data cleaning pipeline built on the **Global Superstore** dataset (51,290 orders across 7 markets and 147 countries, 2011–2014). This project takes raw, messy retail transaction data and turns it into an analysis-ready dataset through missing value handling, deduplication, and data type correction — all documented step-by-step in a Jupyter Notebook. ✨
 
 ## 📌 Overview
 
@@ -35,20 +35,21 @@ Real-world datasets are rarely analysis-ready. This project simulates a common d
 
 Key columns: `Order ID`, `Order Date`, `Ship Date`, `Customer Name`, `Segment`, `Country`, `Region`, `Category`, `Sub-Category`, `Sales`, `Profit`, `Quantity`, `Discount`.
 
-## 🧹 Cleaning Steps
+## 🧽 Cleaning Steps
 
 | Step | Issue Found | Action Taken |
 |---|---|---|
-| Missing values | `Postal Code` ~80% missing (non-US/Canada orders don't have one) | Filled with `'Unknown'` instead of dropping rows |
-| Duplicates | Checked with `.duplicated()` | 0 found; `.drop_duplicates()` applied as a standard safeguard |
-| Data types | `Order Date` / `Ship Date` stored as text in `DD-MM-YYYY` format | Converted to `datetime64` using `pd.to_datetime()` |
-| Validation | — | Checked no order ships before it's placed |
+| 🕳️ Missing values | `Postal Code` ~80% missing (non-US/Canada orders don't have one) | Filled with `'Unknown'` instead of dropping rows |
+| 🪞 Duplicates | Checked with `.duplicated()` | 0 found; `.drop_duplicates()` applied as a standard safeguard |
+| 🔄 Data types | `Order Date` / `Ship Date` stored as text in `DD-MM-YYYY` format | Converted to `datetime64` using `pd.to_datetime()` |
+| ✅ Validation | — | Checked no order ships before it's placed |
 
 ## 🛠️ Tech Stack
 
-- Python 3
-- Pandas
-- Jupyter Notebook
+- 🐍 Python 3
+- 🐼 Pandas
+- 📓 Jupyter Notebook
+- 🔢 NumPy
 
 ## 📁 Project Structure
 
@@ -62,29 +63,33 @@ SuperClean/
 
 ## 🚀 Getting Started
 
-1. Clone the repo
+1. 📥 Clone the repo
    ```bash
    git clone https://github.com/<your-username>/superclean.git
    cd superclean
    ```
-2. Install dependencies
+2. 📦 Install dependencies
    ```bash
    pip install pandas jupyter
    ```
-3. Launch the notebook
+3. ▶️ Launch the notebook
    ```bash
    jupyter notebook Superstore_Data_Cleaning.ipynb
    ```
-   Or open it directly in Google Colab.
+   Or open it directly in Google Colab. 🔗
 
 ## 📊 Output
 
 The final `Global_Superstore_Cleaned.csv` contains all 51,290 rows with:
-- No missing values
-- No duplicate rows
-- Properly typed date columns, ready for time-series analysis, dashboarding (Power BI/Tableau/Excel), or further ML preprocessing
+- ✅ No missing values
+- ✅ No duplicate rows
+- ✅ Properly typed date columns, ready for time-series analysis, dashboarding (Power BI/Tableau/Excel), or further ML preprocessing
 
 ## 👤 Author
 
-**Mayank**  
-Built as part of a hands-on data cleaning practice project.
+**Mayank** — Data Analyst Intern  💼
+Built as part of a hands-on data cleaning practice project. 🚀
+
+---
+
+⭐ If you found this useful, consider giving the repo a star!
