@@ -65,7 +65,7 @@ SuperClean/
 
 1. 📥 Clone the repo
    ```bash
-   git clone [https://github.com/MayankJaiswal1/SCT_DA_2.git]
+   git clone https://github.com/MayankJaiswal1/SCT_DA_2.git
    cd superclean
    ```
 2. 📦 Install dependencies
